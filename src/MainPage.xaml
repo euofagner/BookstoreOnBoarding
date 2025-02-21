@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="src.MainPage"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="#B1C9EC">
+<ContentPage
+    x:Class="src.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:src.ViewModels"
+    x:DataType="vm:BookViewModel"
+    BackgroundColor="#B1C9EC"
+    Shell.NavBarIsVisible="False">
 
     <Grid>
-        
+        <CarouselView ItemsSource="{Binding Books}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="*, Auto, Auto">
+                         
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </Grid>
-    
+
 </ContentPage>
