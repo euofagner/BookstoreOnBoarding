@@ -20,17 +20,18 @@
             HorizontalScrollBarVisibility="Never"
             IndicatorView="indicatorView"
             ItemsSource="{Binding Books}"
-            Loop="False">
+            Loop="False"
+            PositionChanged="CarouselView_PositionChanged">
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="model:BookModel">
                     <Grid Margin="20" RowDefinitions="*, Auto, Auto">
                         <Image Source="{Binding Image}" />
-                        <Label
+                        <Label    
+                            TextColor="{Binding lblTitleColor}"
                             Grid.Row="1"
                             FontAttributes="Bold"
                             FontSize="30"
-                            Text="{Binding Title}"
-                            TextColor="IndianRed" />
+                            Text="{Binding Title}" />
                         <Label
                             Grid.Row="2"
                             FontSize="16"
