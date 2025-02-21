@@ -3,21 +3,76 @@
     x:Class="src.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:src.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:src.ViewModels"
     x:DataType="vm:BookViewModel"
-    BackgroundColor="#B1C9EC"
+    BackgroundColor="#fbe1c8"
     Shell.NavBarIsVisible="False">
 
-    <Grid>
-        <CarouselView ItemsSource="{Binding Books}">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#fc8663" />
+    </ContentPage.Behaviors>
+
+    <Grid RowDefinitions="*, Auto">
+        <CarouselView
+            x:Name="CarouselView"
+            HorizontalScrollBarVisibility="Never"
+            IndicatorView="indicatorView"
+            ItemsSource="{Binding Books}"
+            Loop="False">
             <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <Grid RowDefinitions="*, Auto, Auto">
-                         
+                <DataTemplate x:DataType="model:BookModel">
+                    <Grid Margin="20" RowDefinitions="*, Auto, Auto">
+                        <Image Source="{Binding Image}" />
+                        <Label
+                            Grid.Row="1"
+                            FontAttributes="Bold"
+                            FontSize="30"
+                            Text="{Binding Title}"
+                            TextColor="IndianRed" />
+                        <Label
+                            Grid.Row="2"
+                            FontSize="16"
+                            Text="{Binding Description}" />
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Margin="20"
+            HorizontalOptions="Center">
+            <HorizontalStackLayout>
+                <Button
+                    x:Name="OnBoardingBtn"
+                    Margin="20"
+                    BackgroundColor="#fc8663"
+                    Clicked="OnBoardingBtn_Clicked"
+                    CornerRadius="0"
+                    FontSize="Medium"
+                    HeightRequest="55"
+                    WidthRequest="300" />
+            </HorizontalStackLayout>
+
+
+            <IndicatorView
+                x:Name="indicatorView"
+                Grid.Row="1"
+                IndicatorColor="#c9c4ba"
+                SelectedIndicatorColor="#fc8d69">
+                <IndicatorView.IndicatorTemplate>
+                    <DataTemplate>
+                        <Border
+                            HeightRequest="8"
+                            Stroke="Transparent"
+                            WidthRequest="113" />
+                    </DataTemplate>
+                </IndicatorView.IndicatorTemplate>
+            </IndicatorView>
+        </VerticalStackLayout>
+
     </Grid>
 
 </ContentPage>

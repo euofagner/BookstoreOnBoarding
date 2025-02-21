@@ -36,7 +36,7 @@ public class BookViewModel
         {
             Title = "Crie sua Conta",
             Description = "Cadastre-se agora e tenha acesso a benefícios exclusivos, como recomendações personalizadas e histórico de compras. Vamos começar sua jornada literária!",
-            Image = "image3.png"
+            Image = "image3.png",
         });
     }
 }
