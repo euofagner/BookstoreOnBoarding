@@ -24,19 +24,19 @@ public class BookViewModel
         {
             Title = "Bem-vindo à [Nome da Loja]",
             Description = "Descubra um mundo repleto de histórias fascinantes e conhecimento. Navegue pela nossa coleção e encontre o livro perfeito para você.",
-            Image = "image2.png"
+            Image = "livros.png"
         });
         Books.Add(new BookModel()
         {
             Title = "Ofertas Exclusivas",
             Description = "Fique por dentro das nossas promoções e descontos exclusivos. Aproveite para adquirir seus livros favoritos com preços especiais.",
-            Image = "image4.png"
+            Image = "astronauta.png"
         });
         Books.Add(new BookModel()
         {
             Title = "Crie sua Conta",
             Description = "Cadastre-se agora e tenha acesso a benefícios exclusivos, como recomendações personalizadas e histórico de compras. Vamos começar sua jornada literária!",
-            Image = "image3.png",
+            Image = "imagebooklamp.png",
         });
     }
 }

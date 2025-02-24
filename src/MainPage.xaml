@@ -6,12 +6,12 @@
     xmlns:model="clr-namespace:src.Models"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:src.ViewModels"
+    BackgroundColor="#00a58d"
     x:DataType="vm:BookViewModel"
-    BackgroundColor="#fbe1c8"
     Shell.NavBarIsVisible="False">
 
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior x:Name="statusBar" StatusBarColor="#fc8663" />
+        <toolkit:StatusBarBehavior x:Name="statusBar" StatusBarColor="#007261" />
     </ContentPage.Behaviors>
 
     <Grid RowDefinitions="*, Auto">
@@ -27,15 +27,16 @@
                     <Grid Margin="20" RowDefinitions="*, Auto, Auto">
                         <Image Source="{Binding Image}" />
                         <Label
+                            x:Name="titleLabel"
                             Grid.Row="1"
                             FontAttributes="Bold"
-                            FontSize="30"
-                            StyleId="lblName"
-                            Text="{Binding Title}"
-                            TextColor="#fc8663" />
+                            FontSize="33"
+                            Text="{Binding Title}" 
+                            TextColor="White" />
                         <Label
                             Grid.Row="2"
-                            FontSize="16"
+                            FontSize="18"
+                            TextColor="#1e1e1e"
                             Text="{Binding Description}" />
                     </Grid>
                 </DataTemplate>
@@ -50,9 +51,10 @@
                 <Button
                     x:Name="OnBoardingBtn"
                     Margin="20"
-                    BackgroundColor="#fc8663"
+                    BackgroundColor="#007261"
                     Clicked="OnBoardingBtn_Clicked"
                     CornerRadius="0"
+                    TextColor="White"
                     FontSize="Medium"
                     HeightRequest="55"
                     WidthRequest="300" />
@@ -63,7 +65,7 @@
                 x:Name="indicatorView"
                 Grid.Row="1"
                 IndicatorColor="#cccccc"
-                SelectedIndicatorColor="#fc8d69">
+                SelectedIndicatorColor="#007261">
                 <IndicatorView.IndicatorTemplate>
                     <DataTemplate>
                         <Border
