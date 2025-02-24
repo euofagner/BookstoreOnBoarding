@@ -10,14 +10,8 @@
     BackgroundColor="#fbe1c8"
     Shell.NavBarIsVisible="False">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="#fc8663" />
+        <toolkit:StatusBarBehavior x:Name="statusBar" StatusBarColor="#fc8663" />
     </ContentPage.Behaviors>
 
     <Grid RowDefinitions="*, Auto">
@@ -37,7 +31,7 @@
                             FontAttributes="Bold"
                             FontSize="30"
                             StyleId="lblName"
-                            Text="{Binding Title}" 
+                            Text="{Binding Title}"
                             TextColor="#fc8663" />
                         <Label
                             Grid.Row="2"
@@ -68,7 +62,7 @@
             <IndicatorView
                 x:Name="indicatorView"
                 Grid.Row="1"
-                IndicatorColor="#c9c4ba"
+                IndicatorColor="#cccccc"
                 SelectedIndicatorColor="#fc8d69">
                 <IndicatorView.IndicatorTemplate>
                     <DataTemplate>

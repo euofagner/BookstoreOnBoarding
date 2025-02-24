@@ -5,6 +5,7 @@ using src.Models;
 using System.ComponentModel;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Behaviors;
+using CommunityToolkit.Maui.Core.Platform;
 
 namespace src
 {
@@ -14,7 +15,7 @@ namespace src
         {
             InitializeComponent();
             BindingContext = vm;
-            OnBoardingBtn.Text = "Veja mais";
+            OnBoardingBtn.Text = "Avançar";
         }
 
         private async void OnBoardingBtn_Clicked(object sender, EventArgs e)
@@ -35,18 +36,27 @@ namespace src
 
         private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
         {
-            if (e.CurrentPosition == (int)CarouselView.ItemsSource.Cast<object>().Count() - 1)
+            var items = CarouselView.ItemsSource.Cast<object>().ToList();
+
+            if (e.CurrentPosition == items.Count - 1)
             {
                 OnBoardingBtn.BackgroundColor = Color.FromRgb(24, 106, 185);
                 OnBoardingBtn.Text = "Cadastre - se";
-                
-                
-                BackgroundColor = Color.FromRgb(177, 201, 236);
+
+                statusBar.StatusBarColor = Color.FromRgb(21, 106, 185);
+
+                indicatorView.SelectedIndicatorColor = Color.FromRgb(21, 106, 185);
+
+                BackgroundColor = Color.FromRgb(177, 201, 236); 
             }
             else
             {
                 OnBoardingBtn.BackgroundColor = Color.FromRgb(252, 134, 99);
                 OnBoardingBtn.Text = "Veja mais";
+
+                statusBar.StatusBarColor = Color.FromRgb(252, 134, 99);
+
+                indicatorView.SelectedIndicatorColor = Color.FromArgb("fc8663");
 
                 BackgroundColor = Color.FromRgb(251, 225, 200);
             }
