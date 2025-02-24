@@ -10,6 +10,12 @@
     BackgroundColor="#fbe1c8"
     Shell.NavBarIsVisible="False">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="#fc8663" />
     </ContentPage.Behaviors>
@@ -26,12 +32,13 @@
                 <DataTemplate x:DataType="model:BookModel">
                     <Grid Margin="20" RowDefinitions="*, Auto, Auto">
                         <Image Source="{Binding Image}" />
-                        <Label    
-                            TextColor="{Binding lblTitleColor}"
+                        <Label
                             Grid.Row="1"
                             FontAttributes="Bold"
                             FontSize="30"
-                            Text="{Binding Title}" />
+                            StyleId="lblName"
+                            Text="{Binding Title}" 
+                            TextColor="#fc8663" />
                         <Label
                             Grid.Row="2"
                             FontSize="16"
