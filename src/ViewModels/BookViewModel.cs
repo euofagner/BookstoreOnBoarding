@@ -22,7 +22,7 @@ public class BookViewModel
         Books.Clear();
         Books.Add(new BookModel()
         {
-            Title = "Bem-vindo à [Nome da Loja]",
+            Title = "Bem-vindo(a) à\n[Nome da Loja]",
             Description = "Descubra um mundo repleto de histórias fascinantes e conhecimento. Navegue pela nossa coleção e encontre o livro perfeito para você.",
             Image = "livros.png"
         });

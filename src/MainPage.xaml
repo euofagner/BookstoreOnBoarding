@@ -29,6 +29,7 @@
                         <Label
                             x:Name="titleLabel"
                             Grid.Row="1"
+                            HorizontalTextAlignment="Center"
                             FontAttributes="Bold"
                             FontFamily="TitleFontRegular"
                             FontSize="33"
@@ -38,6 +39,7 @@
                             Grid.Row="2"
                             Margin="10"
                             FontSize="18"
+                            HorizontalTextAlignment="Center"
                             Text="{Binding Description}"
                             TextColor="#1e1e1e" />
                     </Grid>
