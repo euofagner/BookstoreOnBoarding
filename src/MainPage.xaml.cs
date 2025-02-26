@@ -80,7 +80,7 @@ namespace src
 
                 indicatorView.SelectedIndicatorColor = Color.FromArgb("#007261");
 
-                BackgroundColor = Color.FromArgb("#C8E2FB");
+                BackgroundColor = Color.FromArgb("#03a58d");
             }
         }
     }

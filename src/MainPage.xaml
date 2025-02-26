@@ -6,8 +6,8 @@
     xmlns:model="clr-namespace:src.Models"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:src.ViewModels"
-    BackgroundColor="#C8E2FB"
     x:DataType="vm:BookViewModel"
+    BackgroundColor="#00a58d"
     Shell.NavBarIsVisible="False">
 
     <ContentPage.Behaviors>
@@ -30,15 +30,16 @@
                             x:Name="titleLabel"
                             Grid.Row="1"
                             FontAttributes="Bold"
-                            FontSize="33"
                             FontFamily="TitleFontRegular"
-                            Text="{Binding Title}" 
+                            FontSize="33"
+                            Text="{Binding Title}"
                             TextColor="White" />
                         <Label
                             Grid.Row="2"
+                            Margin="10"
                             FontSize="18"
-                            TextColor="#1e1e1e"
-                            Text="{Binding Description}" />
+                            Text="{Binding Description}"
+                            TextColor="#1e1e1e" />
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
@@ -47,17 +48,16 @@
         <VerticalStackLayout
             Grid.Row="1"
             Margin="20"
-            HorizontalOptions="Center">
-            <HorizontalStackLayout>
+            Spacing="50">
+            <HorizontalStackLayout HorizontalOptions="Center">
                 <Button
                     x:Name="OnBoardingBtn"
-                    Margin="20"
                     BackgroundColor="#007261"
                     Clicked="OnBoardingBtn_Clicked"
                     CornerRadius="0"
-                    TextColor="White"
                     FontSize="Medium"
                     HeightRequest="55"
+                    TextColor="White"
                     WidthRequest="300" />
             </HorizontalStackLayout>
 
