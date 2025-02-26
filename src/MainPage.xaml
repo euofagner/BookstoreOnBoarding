@@ -6,7 +6,7 @@
     xmlns:model="clr-namespace:src.Models"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:src.ViewModels"
-    BackgroundColor="#00a58d"
+    BackgroundColor="#C8E2FB"
     x:DataType="vm:BookViewModel"
     Shell.NavBarIsVisible="False">
 
@@ -31,6 +31,7 @@
                             Grid.Row="1"
                             FontAttributes="Bold"
                             FontSize="33"
+                            FontFamily="TitleFontRegular"
                             Text="{Binding Title}" 
                             TextColor="White" />
                         <Label

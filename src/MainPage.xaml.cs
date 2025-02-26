@@ -47,7 +47,7 @@ namespace src
 
                 indicatorView.SelectedIndicatorColor = Color.FromRgb(21, 106, 185);
 
-                BackgroundColor = Color.FromRgb(177, 201, 236);
+                BackgroundColor = Color.FromArgb("#C8E2FB");
             }
             else if(e.CurrentPosition == items.Count - 2)
             {
@@ -80,7 +80,7 @@ namespace src
 
                 indicatorView.SelectedIndicatorColor = Color.FromArgb("#007261");
 
-                BackgroundColor = Color.FromArgb("#03a58d");
+                BackgroundColor = Color.FromArgb("#C8E2FB");
             }
         }
     }
