@@ -29,10 +29,10 @@
                         <Label
                             x:Name="titleLabel"
                             Grid.Row="1"
-                            HorizontalTextAlignment="Center"
                             FontAttributes="Bold"
                             FontFamily="TitleFontRegular"
                             FontSize="33"
+                            HorizontalTextAlignment="Center"
                             Text="{Binding Title}"
                             TextColor="#333333" />
                         <Label
@@ -52,17 +52,29 @@
             Margin="20"
             Spacing="50">
             <HorizontalStackLayout HorizontalOptions="Center">
-                <Button
-                    x:Name="OnBoardingBtn"
-                    BackgroundColor="#007261"
-                    Clicked="OnBoardingBtn_Clicked"
-                    CornerRadius="0"
-                    FontSize="Medium"
-                    HeightRequest="55"
-                    TextColor="White"
-                    WidthRequest="300" />
-            </HorizontalStackLayout>
+                <Grid>
+                    <Button
+                        x:Name="OnBoardingBtn"
+                        BackgroundColor="#007261"
+                        Clicked="OnBoardingBtn_Clicked"
+                        CornerRadius="0"
+                        FontSize="Medium"
+                        HeightRequest="55"
+                        TextColor="White"
+                        WidthRequest="300" />
 
+                    <Image
+                        Grid.Column="1"
+                        Margin="160,0,0,0"
+                        Source="button_arrow.png"
+                        WidthRequest="35">
+
+                        <Image.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="White" />
+                        </Image.Behaviors>
+                    </Image>
+                </Grid>
+            </HorizontalStackLayout>
 
             <IndicatorView
                 x:Name="indicatorView"

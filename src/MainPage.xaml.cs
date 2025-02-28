@@ -56,7 +56,7 @@ namespace src
                 OnBoardingBtn.Text = "Veja mais";
 
                 BackgroundColor = Color.FromArgb("#fbe1c8");
-                OnBoardingBtn.BackgroundColor = Color.FromArgb("#feb200");
+                OnBoardingBtn.BackgroundColor = Color.FromArgb("#fea500");
                 statusBar.StatusBarColor = Color.FromArgb("#feb200");
                 indicatorView.SelectedIndicatorColor = Color.FromArgb("#feb200");
 
@@ -72,7 +72,7 @@ namespace src
             {
                 //green screen
 
-                OnBoardingBtn.Text = "Avança";
+                OnBoardingBtn.Text = "Avançar";
 
                 OnBoardingBtn.BackgroundColor = Color.FromArgb("#007261");
 
