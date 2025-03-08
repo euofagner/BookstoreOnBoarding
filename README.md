@@ -3,7 +3,7 @@
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 
 A simple and elegant onboarding screen for a bookstore app, built with .NET MAUI. 
-This project features three beautifully designed screens with unique colors, images, titles, and descriptions, guiding users to sign up on the final screen.
+This project features three screens with unique colors, images, titles, and descriptions, guiding users to sign up on the final screen.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/eac4d163-7423-4205-9bfb-81701353772e" height="600px">
