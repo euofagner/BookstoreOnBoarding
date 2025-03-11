@@ -1,11 +1,6 @@
 ﻿using src.ViewModels;
-using src.Pages;
-using System.Threading.Tasks;
-using src.Models;
 using System.ComponentModel;
-using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Maui.Behaviors;
-using CommunityToolkit.Maui.Core.Platform;
+using src.Views;
 
 namespace src
 {
@@ -25,7 +20,7 @@ namespace src
 
             if (currentIndex == items.Count -1)
             {
-                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
             }
             else
                 CarouselView.CurrentItem = items[currentIndex + 1];
@@ -37,21 +32,18 @@ namespace src
 
             if (e.CurrentPosition == items.Count - 1)
             {
-                //blue screen
+                //Third Screen
 
                 OnBoardingBtn.Text = "Cadastre-se";
 
                 OnBoardingBtn.BackgroundColor = Color.FromRgb(24, 106, 185);
-
                 statusBar.StatusBarColor = Color.FromRgb(21, 106, 185);
-
                 indicatorView.SelectedIndicatorColor = Color.FromRgb(21, 106, 185);
-
                 BackgroundColor = Color.FromArgb("#C8E2FB");
             }
             else if(e.CurrentPosition == items.Count - 2)
             {
-                //orange screen
+                //Secund Screen
 
                 OnBoardingBtn.Text = "Veja mais";
 
@@ -59,27 +51,16 @@ namespace src
                 OnBoardingBtn.BackgroundColor = Color.FromArgb("#fea500");
                 statusBar.StatusBarColor = Color.FromArgb("#feb200");
                 indicatorView.SelectedIndicatorColor = Color.FromArgb("#feb200");
-
-                //OnBoardingBtn.BackgroundColor = Color.FromRgb(24, 106, 185);
-
-                //statusBar.StatusBarColor = Color.FromRgb(21, 106, 185);
-
-                //indicatorView.SelectedIndicatorColor = Color.FromArgb("fc8663");
-
-                //BackgroundColor = Color.FromRgb(177, 201, 236);
             }
             else
             {
-                //green screen
+                //First Screen
 
                 OnBoardingBtn.Text = "Avançar";
 
                 OnBoardingBtn.BackgroundColor = Color.FromArgb("#007261");
-
                 statusBar.StatusBarColor = Color.FromArgb("#007261");
-
                 indicatorView.SelectedIndicatorColor = Color.FromArgb("#007261");
-
                 BackgroundColor = Color.FromArgb("#03a58d");
             }
         }

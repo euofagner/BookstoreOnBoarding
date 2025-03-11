@@ -91,7 +91,6 @@
                 </IndicatorView.IndicatorTemplate>
             </IndicatorView>
         </VerticalStackLayout>
-
     </Grid>
 
 </ContentPage>

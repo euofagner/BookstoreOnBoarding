@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:src"
-    xmlns:pages="clr-namespace:src.Pages"
+    xmlns:views="clr-namespace:src.Views"
     Title="src"
     Shell.FlyoutBehavior="Disabled">
 
@@ -14,8 +14,8 @@
         Route="MainPage" />
 
     <ShellContent
-        Title="Login"
-        ContentTemplate="{DataTemplate pages:LoginPage}"
-        Route="LoginPage" />
+        Title="Cadastro"
+        ContentTemplate="{DataTemplate views:RegisterPage}"
+        Route="RegisterPage" />
 
 </Shell>
