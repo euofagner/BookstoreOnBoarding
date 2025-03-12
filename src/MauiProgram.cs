@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using src.Services;
 using src.ViewModels;
+using src.Views;
 
 namespace src;
 
@@ -20,6 +22,8 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddTransient<BookViewModel>();
+		builder.Services.AddTransient<AuthService>();
+		builder.Services.AddTransient<LoadingPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();
