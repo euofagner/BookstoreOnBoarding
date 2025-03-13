@@ -18,7 +18,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				fonts.AddFont("PlayfairDisplay-VariableFont_wght.ttf", "TitleFontRegular");
-			});
+                fonts.AddFont("Philosopher-Bold.ttf", "TitlePhilosopherBold");
+                fonts.AddFont("Bookseller-Regular.otf", "BooksellerRegular");
+                fonts.AddFont("Bookseller-RegularBold.otf", "BooksellerRegularBold");
+            });
 
 		builder.Services.AddTransient<BookViewModel>();
 

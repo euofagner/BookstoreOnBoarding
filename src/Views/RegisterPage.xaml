@@ -3,11 +3,79 @@
     x:Class="src.Views.RegisterPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="RegisterPage"
     Shell.FlyoutBehavior="Disabled">
-    <VerticalStackLayout>
 
-        <Button Clicked="Button_Clicked" Text="Register" />
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="White" />
+    </ContentPage.Behaviors>
 
-    </VerticalStackLayout>
+    <Grid Margin="40" RowDefinitions="Auto, *, *, Auto, Auto">
+
+        <VerticalStackLayout>
+            <Label
+                FontFamily="BooksellerRegularBold"
+                FontSize="30"
+                Text="Crie sua conta" />
+
+            <Label
+                FontFamily="BooksellerRegular"
+                FontSize="20"
+                Text="Cadastre-se para começar" />
+        </VerticalStackLayout>
+
+        <Image Grid.Row="1" Source="readingbookred.jpg" />
+
+        <VerticalStackLayout Spacing="25" Grid.Row="2">
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="7"/>
+                </Border.StrokeShape>
+                
+                <Entry PlaceholderColor="#333333" Placeholder="Email" Margin="15, 0, 0, 0"/>
+            </Border>
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="7"/>
+                </Border.StrokeShape>
+
+                <Entry PlaceholderColor="#333333" Placeholder="Password" Margin="15, 0, 0, 0"/>
+            </Border>
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="7"/>
+                </Border.StrokeShape>
+
+                <Entry PlaceholderColor="#333333" Placeholder="Confirm password" Margin="15, 0, 0, 0"/>
+            </Border>
+
+            <Button
+                Grid.Row="3"
+                BackgroundColor="#ff6162"
+                Clicked="Button_Clicked"
+                Text="Sign Up" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="4">
+            <Label HorizontalOptions="Center" Text="Ao usar este app, você concorda com nossos" />
+
+            <Label HorizontalOptions="Center" LineBreakMode="WordWrap">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Termos de uso " TextColor="#ff6162" />
+                        <Span Text="e ">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="Política de privacidade" TextColor="#ff6162" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </VerticalStackLayout>
+
+    </Grid>
 </ContentPage>
