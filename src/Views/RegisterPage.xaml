@@ -11,7 +11,7 @@
         <toolkit:StatusBarBehavior StatusBarColor="White" />
     </ContentPage.Behaviors>
 
-    <Grid Margin="40" RowDefinitions="Auto, *, *, Auto, Auto">
+    <Grid Margin="30" RowDefinitions="Auto, *, *, Auto, Auto">
 
         <VerticalStackLayout>
             <Label
@@ -27,28 +27,39 @@
 
         <Image Grid.Row="1" Source="readingbookred.jpg" />
 
-        <VerticalStackLayout Spacing="25" Grid.Row="2">
+        <VerticalStackLayout Grid.Row="2" Spacing="25">
             <Border>
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="7"/>
+                    <RoundRectangle CornerRadius="7" />
                 </Border.StrokeShape>
-                
-                <Entry PlaceholderColor="#333333" Placeholder="Email" Margin="15, 0, 0, 0"/>
+
+                <Entry
+                    Margin="15,0,0,0"
+                    Placeholder="Email"
+                    PlaceholderColor="#333333" />
             </Border>
 
             <Border>
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="7"/>
+                    <RoundRectangle CornerRadius="7" />
                 </Border.StrokeShape>
 
-                <Entry PlaceholderColor="#333333" Placeholder="Password" Margin="15, 0, 0, 0"/>
+                <Entry
+                    x:Name="entry"
+                    Margin="15,0,0,0"
+                    Keyboard="Password"
+                    Placeholder="Password"
+                    PlaceholderColor="#333333" /> 
             </Border>
             <Border>
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="7"/>
+                    <RoundRectangle CornerRadius="7" />
                 </Border.StrokeShape>
 
-                <Entry PlaceholderColor="#333333" Placeholder="Confirm password" Margin="15, 0, 0, 0"/>
+                <Entry
+                    Margin="15,0,0,0"
+                    Placeholder="Confirm password"
+                    PlaceholderColor="#333333" />
             </Border>
 
             <Button

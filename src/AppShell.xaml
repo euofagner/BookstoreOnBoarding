@@ -28,4 +28,9 @@
         ContentTemplate="{DataTemplate views:HomePage}"
         Route="HomePage" />
 
+    <ShellContent
+        Title="Library"
+        ContentTemplate="{DataTemplate views:Library}"
+        Route="Library" />
+
 </Shell>
