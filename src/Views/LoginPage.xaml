@@ -26,14 +26,15 @@
         <Image Grid.Row="1" Source="loginimage.png" />
 
         <VerticalStackLayout Grid.Row="2" Spacing="20">
-            <Border>
+            <Border StrokeShape="RoundRectangle 7">
                 <Entry
                     Margin="15,0"
+                    Keyboard="Email"
                     Placeholder="Email"
                     PlaceholderColor="#333333" />
             </Border>
 
-            <Border>
+            <Border StrokeShape="RoundRectangle 7">
                 <Entry
                     Margin="15,0"
                     IsPassword="True"

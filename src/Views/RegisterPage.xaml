@@ -36,6 +36,7 @@
 
                 <Entry
                     Margin="15,0,0,0"
+                    Keyboard="Email"
                     Placeholder="Email"
                     PlaceholderColor="#333333" />
             </Border>
@@ -52,6 +53,7 @@
                 <Entry
                     Margin="15,0,0,0"
                     Placeholder="Confirm password"
+                    Keyboard="Password"
                     PlaceholderColor="#333333" />
             </Border>
 
