@@ -23,9 +23,12 @@
                 Text="Faça login para entrar" />
         </VerticalStackLayout>
 
-        <Image Grid.Row="1" Source="loginimage.png" />
+        <Image
+            Grid.Row="1"
+            HeightRequest="300"
+            Source="loginimage.png" />
 
-        <VerticalStackLayout Grid.Row="2" Spacing="20">
+        <VerticalStackLayout Grid.Row="2" Spacing="15">
             <Border StrokeShape="RoundRectangle 7">
                 <Entry
                     Margin="15,0"
@@ -42,13 +45,28 @@
                     Placeholder="Password"
                     PlaceholderColor="#333333" />
             </Border>
+
+            <Label
+                HorizontalTextAlignment="End"
+                Text="Forgot Password?"
+                VerticalTextAlignment="Start" />
         </VerticalStackLayout>
 
-        <Button
-            Grid.Row="3"
-            BackgroundColor="#ff6162"
-            Clicked="Button_Clicked"
-            Text="Log in" />
+        <VerticalStackLayout Grid.Row="3">
+            <Button
+                BackgroundColor="#ff6162"
+                Clicked="Button_Clicked"
+                Text="Log in" />
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Não tem uma conta? " />
+                        <Span Text="Cadastre-se" TextColor="#ff6062" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </VerticalStackLayout>
     </Grid>
 
 </ContentPage>

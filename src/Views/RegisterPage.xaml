@@ -72,9 +72,9 @@
                     <FormattedString>
                         <Span Text="Termos de uso " TextColor="#ff6162" />
                         <Span Text="e ">
-                            <Span.GestureRecognizers>
+                            <!--<Span.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding TapCommand}" />
-                            </Span.GestureRecognizers>
+                            </Span.GestureRecognizers>-->
                         </Span>
                         <Span Text="Política de privacidade" TextColor="#ff6162" />
                     </FormattedString>
