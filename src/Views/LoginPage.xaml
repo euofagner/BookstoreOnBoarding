@@ -6,7 +6,10 @@
     Title="LoginPage"
     Shell.FlyoutBehavior="Disabled">
 
-    <Grid Margin="30" RowDefinitions="*, Auto, Auto">
+    <Grid
+        Margin="30"
+        RowDefinitions="Auto, Auto, Auto, Auto"
+        RowSpacing="40">
 
         <VerticalStackLayout>
             <Label
@@ -20,10 +23,28 @@
                 Text="Faça login para entrar" />
         </VerticalStackLayout>
 
-        <Image Source="picstore" />
+        <Image Grid.Row="1" Source="loginimage.png" />
+
+        <VerticalStackLayout Grid.Row="2" Spacing="20">
+            <Border>
+                <Entry
+                    Margin="15,0"
+                    Placeholder="Email"
+                    PlaceholderColor="#333333" />
+            </Border>
+
+            <Border>
+                <Entry
+                    Margin="15,0"
+                    IsPassword="True"
+                    Keyboard="Password"
+                    Placeholder="Password"
+                    PlaceholderColor="#333333" />
+            </Border>
+        </VerticalStackLayout>
 
         <Button
-            Grid.Row="1"
+            Grid.Row="3"
             BackgroundColor="#ff6162"
             Clicked="Button_Clicked"
             Text="Log in" />
