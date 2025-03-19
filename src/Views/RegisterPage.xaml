@@ -40,7 +40,8 @@
                     Margin="15,0,0,0"
                     Keyboard="Email"
                     Placeholder="Email"
-                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333,
+                                                       Dark=#cccccc}" />
             </Border>
 
             <Border StrokeShape="RoundRectangle 7">
@@ -49,23 +50,25 @@
                     Margin="15,0,0,0"
                     Keyboard="Password"
                     Placeholder="Password"
-                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333,
+                                                       Dark=#cccccc}" />
             </Border>
             <Border StrokeShape="RoundRectangle 7">
                 <Entry
                     Margin="15,0,0,0"
                     Keyboard="Password"
                     Placeholder="Confirm password"
-                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333,
+                                                       Dark=#cccccc}" />
             </Border>
 
             <Button
                 Grid.Row="3"
                 BackgroundColor="#ff6162"
                 Clicked="Button_Clicked"
-                Text="Sign Up" 
-                TextColor="White" 
-                FontAttributes="Bold" />
+                FontAttributes="Bold"
+                Text="Sign Up"
+                TextColor="White" />
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="4">
