@@ -5,12 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="RegisterPage"
-    BackgroundColor="White"
-    Shell.NavBarIsVisible="False"
-    Shell.FlyoutBehavior="Disabled">
+    BackgroundColor="{AppThemeBinding Light={StaticResource White},
+                                      Dark=#1e1e1e}"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="White" />
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource White}, Dark=#1e1e1e}" />
     </ContentPage.Behaviors>
 
     <Grid Margin="30" RowDefinitions="Auto, *, *, Auto, Auto">
@@ -39,7 +40,7 @@
                     Margin="15,0,0,0"
                     Keyboard="Email"
                     Placeholder="Email"
-                    PlaceholderColor="#333333" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
             </Border>
 
             <Border StrokeShape="RoundRectangle 7">
@@ -48,21 +49,23 @@
                     Margin="15,0,0,0"
                     Keyboard="Password"
                     Placeholder="Password"
-                    PlaceholderColor="#333333" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
             </Border>
             <Border StrokeShape="RoundRectangle 7">
                 <Entry
                     Margin="15,0,0,0"
-                    Placeholder="Confirm password"
                     Keyboard="Password"
-                    PlaceholderColor="#333333" />
+                    Placeholder="Confirm password"
+                    PlaceholderColor="{AppThemeBinding Light=#333333, Dark=#cccccc}" />
             </Border>
 
             <Button
                 Grid.Row="3"
                 BackgroundColor="#ff6162"
                 Clicked="Button_Clicked"
-                Text="Sign Up" />
+                Text="Sign Up" 
+                TextColor="White" 
+                FontAttributes="Bold" />
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="4">
