@@ -4,12 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="LoginPage"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <Grid
         Margin="30"
         RowDefinitions="Auto, Auto, Auto, Auto"
-        RowSpacing="40">
+        RowSpacing="20">
 
         <VerticalStackLayout>
             <Label
@@ -52,13 +53,13 @@
                 VerticalTextAlignment="Start" />
         </VerticalStackLayout>
 
-        <VerticalStackLayout Grid.Row="3">
+        <VerticalStackLayout Grid.Row="3" Spacing="20">
             <Button
                 BackgroundColor="#ff6162"
                 Clicked="Button_Clicked"
                 Text="Log in" />
 
-            <Label>
+            <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Não tem uma conta? " />
