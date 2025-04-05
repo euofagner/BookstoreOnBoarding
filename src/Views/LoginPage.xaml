@@ -9,7 +9,11 @@
     Shell.NavBarIsVisible="False">
 
     <ContentPage.Behaviors>
+<<<<<<< HEAD
         <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" StatusBarStyle="{AppThemeBinding Light=DarkContent, Dark=LightContent}" />
+=======
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource White}, Dark=#1e1e1e}" />
+>>>>>>> a4bf7587f57cf854bbf86f52da35853209c1d6c2
     </ContentPage.Behaviors>
 
     <Grid
