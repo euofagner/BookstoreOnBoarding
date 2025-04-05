@@ -30,8 +30,8 @@
                             x:Name="titleLabel"
                             Grid.Row="1"
                             FontAttributes="Bold"
-                            FontSize="33"
                             FontFamily="BooksellerRegularBold"
+                            FontSize="33"
                             HorizontalTextAlignment="Center"
                             Text="{Binding Title}"
                             TextColor="#333333" />

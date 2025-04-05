@@ -3,9 +3,14 @@
     x:Class="src.Views.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="LoginPage"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" StatusBarStyle="{AppThemeBinding Light=DarkContent, Dark=LightContent}" />
+    </ContentPage.Behaviors>
 
     <Grid
         Margin="30"
@@ -35,7 +40,8 @@
                     Margin="15,0"
                     Keyboard="Email"
                     Placeholder="Email"
-                    PlaceholderColor="#333333" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333,
+                                                       Dark=#cccccc}" />
             </Border>
 
             <Border StrokeShape="RoundRectangle 7">
@@ -44,20 +50,34 @@
                     IsPassword="True"
                     Keyboard="Password"
                     Placeholder="Password"
-                    PlaceholderColor="#333333" />
+                    PlaceholderColor="{AppThemeBinding Light=#333333,
+                                                       Dark=#cccccc}" />
             </Border>
 
-            <Label
-                HorizontalTextAlignment="End"
-                Text="Forgot Password?"
-                VerticalTextAlignment="Start" />
+            <Grid ColumnDefinitions="Auto, Auto, *" RowDefinitions="*">
+                <CheckBox Color="#ff6162" />
+
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Text="Manter conectado"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Column="2"
+                    HorizontalTextAlignment="End"
+                    Text="Esqueceu sua senha?"
+                    VerticalOptions="Center" />
+            </Grid>
+
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="3" Spacing="20">
             <Button
                 BackgroundColor="#ff6162"
                 Clicked="Button_Clicked"
-                Text="Log in" />
+                Text="Log in"
+                TextColor="White" />
 
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
