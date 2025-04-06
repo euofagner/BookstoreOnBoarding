@@ -8,11 +8,11 @@ public partial class HomePage : ContentPage
 
         Shell.SetBackgroundColor(this, Color.FromArgb("#eaeac3"));
         Shell.SetTitleColor(this, Color.FromArgb("#333333"));
-        Shell.SetNavBarHasShadow(this, true);
+        //Shell.SetNavBarHasShadow(this, true);
     }
 
-    private async void Button_Clicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync($"//{nameof(Library)}");
-    }
+    //private async void Button_Clicked(object sender, EventArgs e)
+    //{
+    //    await Shell.Current.GoToAsync($"//{nameof(Library)}");
+    //}
 }

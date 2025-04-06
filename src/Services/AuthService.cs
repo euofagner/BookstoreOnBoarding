@@ -13,7 +13,7 @@ public class AuthService
     public async Task<bool> IsAuthenticatedAsync()
     {
         await Task.Delay(1000);
-
+            
         var authState = Preferences.Default.Get<bool>(AuthStateKey, false);
         return authState;
     }

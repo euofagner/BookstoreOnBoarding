@@ -4,10 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    Title="HomePage"
+    Title=""
     BackgroundColor="#eaeac3"
-    Shell.NavBarIsVisible="False"
-    Shell.PresentationMode="Modal">
+    Shell.FlyoutBehavior="Flyout"
+    Shell.NavBarIsVisible="True">
 
     <ContentPage.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="#eaeac3" />
@@ -21,21 +21,16 @@
                 FontSize="30"
                 Text="Estante de livros"
                 TextColor="#333333" />
-
-            <!--<Label
-                FontFamily="BooksellerRegular"
-                FontSize="20"
-                Text="Estante de livros" />-->
         </VerticalStackLayout>
 
         <Image Source="picstore" />
 
-        <Button
+        <!--<Button
             Grid.Row="2"
             Clicked="Button_Clicked"
             FontAttributes="Bold"
             Text="Abra sua biblioteca"
-            TextColor="White" />
+            TextColor="White" />-->
 
     </Grid>
 
