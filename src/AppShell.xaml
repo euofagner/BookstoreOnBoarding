@@ -14,6 +14,12 @@
         Shell.FlyoutItemIsVisible="False" />
 
     <ShellContent
+        Title="Loading"
+        ContentTemplate="{DataTemplate views:LoadingView}"
+        Route="LoadingView"
+        Shell.FlyoutItemIsVisible="False" />
+
+    <ShellContent
         Title="Cadastro"
         ContentTemplate="{DataTemplate views:RegisterPage}"
         Route="RegisterPage"
