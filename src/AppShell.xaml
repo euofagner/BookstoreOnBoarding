@@ -40,6 +40,5 @@
     <ShellContent
         Title="Profile"
         ContentTemplate="{DataTemplate views:ProfileView}"
-        Route="ProfileView"
-        Shell.FlyoutItemIsVisible="True" />
+        Route="ProfileView" />
 </Shell>
