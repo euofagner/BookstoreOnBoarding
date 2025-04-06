@@ -32,6 +32,7 @@ public static class MauiProgram
         builder.Services.AddTransient<BookViewModel>();
         builder.Services.AddTransient<AuthService>();
         builder.Services.AddTransient<LoadingView>();
+        builder.Services.AddTransient<LoginPage>();
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CustomEntry", (handler, view) =>
         {

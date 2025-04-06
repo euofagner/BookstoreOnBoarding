@@ -55,7 +55,7 @@
             </Border>
 
             <Grid ColumnDefinitions="Auto, Auto, *" RowDefinitions="*">
-                <CheckBox Color="#ff6162" />
+                <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="#ff6162" />
 
                 <Label
                     Grid.Column="1"
