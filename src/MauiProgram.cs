@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Platform;
+using src.Services;
 using src.ViewModels;
 using src.Views;
 
@@ -24,11 +25,13 @@ public static class MauiProgram
                 fonts.AddFont("Bookseller-RegularBold.otf", "BooksellerRegularBold");
             });
 
-		builder.Services.AddTransient<BookViewModel>();
-
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddTransient<BookViewModel>();
+        builder.Services.AddTransient<AuthService>();
+        builder.Services.AddTransient<LoadingView>();
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CustomEntry", (handler, view) =>
         {

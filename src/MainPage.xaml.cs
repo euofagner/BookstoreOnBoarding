@@ -6,6 +6,8 @@ namespace src
 {
     public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
+        
+
         public MainPage(BookViewModel vm)
         {
             InitializeComponent();
